@@ -16,7 +16,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class PickerDialog extends DialogFragment {
+public class SGPickerDialog extends DialogFragment {
 
     private int mInputLength = 0;
     @Nullable
