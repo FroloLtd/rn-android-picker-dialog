@@ -1,9 +1,12 @@
 package com.rnandroidpicker;
 
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.util.Log;
+
+import androidx.annotation.RequiresApi;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -49,6 +52,7 @@ public class SGPickerModule extends ReactContextBaseJavaModule {
             mPromise = promise;
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         public void onConfirmSelected(Bundle bundle) {
             if (!mPromiseResolved && getReactApplicationContext().hasActiveCatalystInstance()) {
@@ -72,6 +76,7 @@ public class SGPickerModule extends ReactContextBaseJavaModule {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @ReactMethod
     public void showDialog(ReadableArray inputs, ReadableArray selectedValues, ReadableMap options, Promise promise) {
         if (pickerDialog != null
@@ -126,6 +131,7 @@ public class SGPickerModule extends ReactContextBaseJavaModule {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void createDialog(String[][] inputValues, Integer[] selectedIndex, String title, String sideText, Promise promise) {
         FragmentActivity activity = (FragmentActivity) getCurrentActivity();
         if (activity == null) {
