@@ -21,17 +21,17 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 
 
-public class PickerModule extends ReactContextBaseJavaModule {
+public class SGPickerModule extends ReactContextBaseJavaModule {
 
     public static final String FRAGMENT_TAG = "PickerAndroid";
     private static final String ERROR_NO_ACTIVITY = "E_NO_ACTIVITY";
     private static final String ERROR_MISMATCH_INPUTS = "ERROR_MISMATCH_INPUTS";
     private static final String ERROR_ARRAY_TOO_LONG = "ERROR_ARRAY_TOO_LONG";
-    private PickerDialog pickerDialog = null;
+    private SGPickerDialog pickerDialog = null;
 
-    public PickerModule(ReactApplicationContext reactContext) {
+    public SGPickerModule(ReactApplicationContext reactContext) {
         super(reactContext);
-        pickerDialog = new PickerDialog();
+        pickerDialog = new SGPickerDialog();
     }
 
     @Nonnull
@@ -40,7 +40,7 @@ public class PickerModule extends ReactContextBaseJavaModule {
         return FRAGMENT_TAG;
     }
 
-    private class PickerDialogListener implements PickerDialog.OnPickerListener {
+    private class PickerDialogListener implements SGPickerDialog.OnPickerListener {
 
         private final Promise mPromise;
         private boolean mPromiseResolved = false;
