@@ -12,12 +12,12 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
-public class PickerPackage implements ReactPackage {
+public class SGPickerPackage implements ReactPackage {
 
     @Override
     public List<NativeModule> createNativeModules(@Nonnull ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new PickerModule(reactContext));
+        modules.add(new SGPickerModule(reactContext));
         return modules;
     }
 
