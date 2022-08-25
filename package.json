@@ -25,12 +25,12 @@
   },
   "homepage": "https://github.com/GZtheStackJourney/rn-android-picker-dialog",
   "peerDependencies": {
-    "react-native": "^0.59.9"
+    "react-native": "^0.68.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/runtime": "^7.4.5",
-    "@types/react-native": "^0.57.63",
+    "@types/react-native": "^0.68.0",
     "babel-jest": "^24.8.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
